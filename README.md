@@ -29,9 +29,9 @@ Users should be able to:
 
 ### Screenshot
 
-<img src="../seventh-project/public/assets/screenshotDesktop.png" alt="screenshot">
-<img src="../seventh-project/public/assets/screenshotMobile.png" alt="screenshot">
-<img src="../seventh-project/public/assets/screenshotMobile-1.png" alt="screenshot">
+<img src="./public/assets/screenshotDesktop.png" alt="screenshot">
+<img src="./public/assets/screenshotMobile.png" alt="screenshot">
+<img src="./public/assets/screenshotMobile-1.png" alt="screenshot">
 
 ### Links
 
