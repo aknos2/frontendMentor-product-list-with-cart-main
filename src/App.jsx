@@ -13,6 +13,10 @@ function App() {
   const [orderConfirmed, setOrderConfirmed] = useState(false);
   const totalPrice = cartItem.reduce((sum, item) => sum + item.price * item.quantity, 0)
 
+  const getImagePath = (path) => {
+    return `${import.meta.env.BASE_URL}${path}`;
+  }
+
   const handleAddToCart = (item) => {
     setCartItem(prev => {
       const exists = prev.find((i) => i.name === item.name);
@@ -74,10 +78,10 @@ function App() {
                 <div key={index}>
                   <div className='relative mb-7'>
                     <picture>
-                      <source srcSet={item.image.mobile} media="(max-width: 639px)"/>
-                      <source srcSet={item.image.tablet} media="(min-width: 640px) and (max-width: 1023px)"/>
-                      <source srcSet={item.image.desktop} media="(min-width: 1024px)"/>
-                      <img src={item.image.desktop} alt={item.name} 
+                      <source srcSet={getImagePath(item.image.mobile)} media="(max-width: 639px)"/>
+                      <source srcSet={getImagePath(item.image.tablet)} media="(min-width: 640px) and (max-width: 1023px)"/>
+                      <source srcSet={getImagePath(item.image.desktop)} media="(min-width: 1024px)"/>
+                      <img src={getImagePath(item.image.desktop)} alt={item.name} 
                       className='rounded-2xl'/>
                     </picture>
 
